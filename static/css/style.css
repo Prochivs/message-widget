@@ -1,5 +1,5 @@
 .widget {
-  display:none;
+  /* display:none; */
   width: 350px;
   right: 5%;
   height: 500px;
@@ -187,7 +187,7 @@ blockquote {
 }
 
 .profile_div {
-  /* display: none; */
+  display: none;
   position: fixed;
   padding: 15px;
   width: 7%;
