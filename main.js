@@ -64,6 +64,7 @@ document.body.appendChild(widgetContainer);
 function loadScript(src, callback) {
   const script = document.createElement("script");
   script.src = src;
+  script.type = "text/javascript"; // Add this line
   script.onload = callback;
   document.body.appendChild(script);
 }
@@ -107,7 +108,7 @@ loadScript("static/js/lib/showdown.min.js", () => {
 
 // Load external CSS files
 loadCSS("static/css/materialize.min.css");
-loadCSS("static/css/style.css");
+loadCSS("https://rawcdn.githack.com/Prochivs/message-widget/e4131429f7351c50d6547cc2d14e1a2b2af50558/static/css/style.css");
 loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 );
 loadCSS("https://fonts.googleapis.com/css2?family=Lato&display=swap");
