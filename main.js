@@ -101,7 +101,7 @@ loadScript("static/js/lib/chart.min.js", () => {
   console.log("External script 4 loaded.");
 });
 
-loadScript("/static/js/lib/showdown.min.js", () => {
+loadScript("static/js/lib/showdown.min.js", () => {
   console.log("External script 5 loaded.");
 });
 
