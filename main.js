@@ -60,7 +60,7 @@ document.body.appendChild(widgetContainer);
 
 // Add event listener to the generate button
 
-// Load external scripts
+/// Load external scripts
 function loadScript(src, callback) {
   const script = document.createElement("script");
   script.src = src;
@@ -76,40 +76,35 @@ function loadCSS(href) {
   document.head.appendChild(link);
 }
 
-// Load additional scripts
-loadScript(
-  "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
-  () => {
-    console.log("Additional script  0 loaded.");
-  }
-);
+// Load external scripts and CSS files
+loadScript("https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js", () => {
+  console.log("jQuery loaded.");
+  // You can load additional scripts after jQuery if needed
+});
 
-// Load external script tags
+loadCSS("https://raw.githack.com/Prochivs/message-widget/main/static/css/materialize.min.css");
+loadCSS("https://raw.githack.com/Prochivs/message-widget/main/static/css/style.css");
+loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+loadCSS("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+loadCSS("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+// Load additional scripts
 loadScript("static/js/lib/materialize.min.js", () => {
-  console.log("External script 1 loaded.");
+  console.log("Materialize loaded.");
 });
 
 loadScript("static/js/lib/uuid.min.js", () => {
-  console.log("External script 2 loaded.");
+  console.log("UUID loaded.");
 });
 
 loadScript("/static/js/script.js", () => {
-  console.log("External script 3 loaded.");
+  console.log("Script loaded.");
 });
 
 loadScript("static/js/lib/chart.min.js", () => {
-  console.log("External script 4 loaded.");
+  console.log("Chart.js loaded.");
 });
 
 loadScript("static/js/lib/showdown.min.js", () => {
-  console.log("External script 5 loaded.");
+  console.log("Showdown loaded.");
 });
-
-// Load external CSS files
-loadCSS("static/css/materialize.min.css");
-loadCSS("https://raw.githack.com/Prochivs/message-widget/main/static/css/style.css");
-loadCSS(
-  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-);
-loadCSS("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-loadCSS("https://fonts.googleapis.com/icon?family=Material+Icons");
