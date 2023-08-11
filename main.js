@@ -60,7 +60,7 @@ document.body.appendChild(widgetContainer);
 
 // Add event listener to the generate button
 
-/// Load external scripts
+// Load external scripts
 function loadScript(src, callback) {
   const script = document.createElement("script");
   script.src = src;
@@ -76,35 +76,36 @@ function loadCSS(href) {
   document.head.appendChild(link);
 }
 
-// Load external scripts and CSS files
-loadScript("https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js", () => {
-  console.log("jQuery loaded.");
-  // You can load additional scripts after jQuery if needed
+// Load additional scripts
+loadScript(
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
+  () => {
+    console.log("Additional script  0 loaded.");
+  }
+);
+
+// Load external script tags
+loadScript("https://github.com/Prochivs/message-widget/blob/main/static/js/lib/materialize.min.js", () => {
+  console.log("External script 1 loaded.");
 });
 
-loadCSS("static/css/materialize.min.css");
-loadCSS("https://raw.githack.com/Prochivs/message-widget/main/static/css/style.css");
-loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+loadScript("https://cdn.jsdelivr.net/gh/Prochivs/message-widget@main/static/js/lib/uuid.min.js", () => {
+  console.log("External script 2 loaded.");
+});
+
+loadScript("https://cdn.jsdelivr.net/gh/Prochivs/message-widget@main/static/js/script.js", () => {
+  console.log("External script 3 loaded.");
+});
+
+loadScript("https://cdn.jsdelivr.net/gh/Prochivs/message-widget@main/static/js/lib/showdown.min.js", () => {
+  console.log("External script 5 loaded.");
+});
+
+// Load external CSS files
+loadCSS("https://cdn.jsdelivr.net/gh/Prochivs/message-widget@main/static/css/materialize.min.css");
+loadCSS("https://github.com/Prochivs/message-widget/blob/main/static/css/style.css");
+loadCSS(
+  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+);
 loadCSS("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 loadCSS("https://fonts.googleapis.com/icon?family=Material+Icons");
-
-// Load additional scripts
-loadScript("static/js/lib/materialize.min.js", () => {
-  console.log("Materialize loaded.");
-});
-
-loadScript("static/js/lib/uuid.min.js", () => {
-  console.log("UUID loaded.");
-});
-
-loadScript("/static/js/script.js", () => {
-  console.log("Script loaded.");
-});
-
-loadScript("static/js/lib/chart.min.js", () => {
-  console.log("Chart.js loaded.");
-});
-
-loadScript("static/js/lib/showdown.min.js", () => {
-  console.log("Showdown loaded.");
-});
