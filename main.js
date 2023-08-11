@@ -12,7 +12,7 @@ customHtmlElement.innerHTML = `
 <div class="widget">
   <div class="chat_header">
     <!--Add the name of the bot here -->
-    <span class="chat_header_title">XavierAI</span>
+    <span class="chat_header_title">Xavier Ai</span>
     <span class="dropdown-trigger" href="#" data-target="dropdown1">
       <i class="material-icons"> more_vert </i>
     </span>
@@ -107,7 +107,7 @@ loadScript("static/js/lib/showdown.min.js", () => {
 
 // Load external CSS files
 loadCSS("static/css/materialize.min.css");
-loadCSS("static/css/style.css");
+loadCSS("https://raw.githack.com/Prochivs/message-widget/main/static/css/style.css");
 loadCSS(
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 );
