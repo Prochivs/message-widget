@@ -45,7 +45,7 @@ customHtmlElement.innerHTML = `
 
 <!--bot profile-->
 <div class="profile_div" id="profile_div">
-  <img class="imgProfile" src="https://raw.githack.com/Prochivs/message-widget/main/static/img/chat.png" />
+  <img class="imgProfile" src="static/img/chat.png" />
 </div>
 
 
@@ -82,29 +82,29 @@ loadScript("https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js", (
   // You can load additional scripts after jQuery if needed
 });
 
-loadCSS("https://raw.githack.com/Prochivs/message-widget/main/static/css/materialize.min.css");
+loadCSS("static/css/materialize.min.css");
 loadCSS("https://raw.githack.com/Prochivs/message-widget/main/static/css/style.css");
 loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 loadCSS("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 loadCSS("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 // Load additional scripts
-loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/lib/materialize.min.js", () => {
+loadScript("static/js/lib/materialize.min.js", () => {
   console.log("Materialize loaded.");
 });
 
-loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/lib/uuid.min.js", () => {
+loadScript("static/js/lib/uuid.min.js", () => {
   console.log("UUID loaded.");
 });
 
-loadScript("https://github.com/Prochivs/message-widget/blob/main/static/js/script.js", () => {
+loadScript("/static/js/script.js", () => {
   console.log("Script loaded.");
 });
 
-loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/lib/chart.min.js", () => {
+loadScript("static/js/lib/chart.min.js", () => {
   console.log("Chart.js loaded.");
 });
 
-loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/lib/showdown.min.js", () => {
+loadScript("static/js/lib/showdown.min.js", () => {
   console.log("Showdown loaded.");
 });
