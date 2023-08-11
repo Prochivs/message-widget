@@ -9,14 +9,14 @@ function include(file) {
 
 /* include all the components js file */
 
-include('./static/js/components/chat.js');
-include('./static/js/constants.js');
-include('./static/js/components/cardsCarousel.js');
-include('./static/js/components/botTyping.js');
-include('./static/js/components/charts.js');
-include('./static/js/components/collapsible.js');
-include('./static/js/components/dropDown.js');
-include('./static/js/components/location.js');
-include('./static/js/components/pdfAttachment.js');
-include('./static/js/components/quickReplies.js');
-include('./static/js/components/suggestionButtons.js');
+include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/chat.js');
+include('https://raw.githack.com/Prochivs/message-widget/main/static/js/constants.js');
+include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/cardsCarousel.js');
+include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/botTyping.js');
+include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/charts.js');
+include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/collapsible.js');
+include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/dropDown.js');
+include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/location.js');
+include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/pdfAttachment.js');
+include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/quickReplies.js');
+include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/suggestionButtons.js');

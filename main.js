@@ -45,7 +45,7 @@ customHtmlElement.innerHTML = `
 
 <!--bot profile-->
 <div class="profile_div" id="profile_div">
-  <img class="imgProfile" src="static/img/chat.png" />
+  <img class="imgProfile" src="https://raw.githack.com/Prochivs/message-widget/main/static/img/chat.png" />
 </div>
 
 
@@ -77,7 +77,9 @@ function loadCSS(href) {
   link.href = href;
   document.head.appendChild(link);
 }
-
+loadScript("https://code.jquery.com/jquery-3.6.0.min.js", () => {
+  console.log("External script 2 loaded.");
+});
 // Load additional scripts
 loadScript(
   "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
@@ -91,7 +93,7 @@ loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/lib/m
   console.log("External script 1 loaded.");
 });
 
-loadScript("static/js/lib/uuid.min.js", () => {
+loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/lib/uuid.min.js", () => {
   console.log("External script 2 loaded.");
 });
 
@@ -99,11 +101,11 @@ loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/scrip
   console.log("External script 3 loaded.");
 });
 
-loadScript("static/js/lib/chart.min.js", () => {
-  console.log("External script 4 loaded.");
-});
+// loadScript("static/js/lib/chart.min.js", () => {
+//   console.log("External script 4 loaded.");
+// });
 
-loadScript("static/js/lib/showdown.min.js", () => {
+loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/lib/showdown.min.js", () => {
   console.log("External script 5 loaded.");
 });
 
