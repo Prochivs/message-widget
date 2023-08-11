@@ -12,7 +12,7 @@ customHtmlElement.innerHTML = `
 <div class="widget">
   <div class="chat_header">
     <!--Add the name of the bot here -->
-    <span class="chat_header_title">Xavier Ai</span>
+    <span class="chat_header_title">XavierAI</span>
     <span class="dropdown-trigger" href="#" data-target="dropdown1">
       <i class="material-icons"> more_vert </i>
     </span>
