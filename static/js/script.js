@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* import components */
-include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/index.js');
+include('https://cdn.jsdelivr.net/gh/Prochivs/message-widget@main/static/js/components/index.js');
 
 window.addEventListener('load', () => {
   // initialization

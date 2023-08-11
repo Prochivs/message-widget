@@ -98,7 +98,7 @@ loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/lib/u
 });
 
 loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/script.js", () => {
-  console.log("External script 3 loaded.");
+  console.log("External script 3 loaded.https://raw.githack.com/Prochivs/message-widget/main/static/js/script.js");
 });
 
 // loadScript("static/js/lib/chart.min.js", () => {
