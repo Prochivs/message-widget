@@ -45,7 +45,7 @@ customHtmlElement.innerHTML = `
 
 <!--bot profile-->
 <div class="profile_div" id="profile_div">
-  <img class="imgProfile" src="static/img/chat.png" />
+  <img class="imgProfile" src="https://raw.githack.com/Prochivs/message-widget/main/static/img/chat.png" />
 </div>
 
 
