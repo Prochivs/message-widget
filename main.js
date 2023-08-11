@@ -89,22 +89,22 @@ loadCSS("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 loadCSS("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 // Load additional scripts
-loadScript("static/js/lib/materialize.min.js", () => {
+loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/lib/materialize.min.js", () => {
   console.log("Materialize loaded.");
 });
 
-loadScript("static/js/lib/uuid.min.js", () => {
+loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/lib/uuid.min.js", () => {
   console.log("UUID loaded.");
 });
 
-loadScript("/static/js/script.js", () => {
+loadScript("https://github.com/Prochivs/message-widget/blob/main/static/js/script.js", () => {
   console.log("Script loaded.");
 });
 
-loadScript("static/js/lib/chart.min.js", () => {
+loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/lib/chart.min.js", () => {
   console.log("Chart.js loaded.");
 });
 
-loadScript("static/js/lib/showdown.min.js", () => {
+loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/lib/showdown.min.js", () => {
   console.log("Showdown loaded.");
 });
