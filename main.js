@@ -7,9 +7,10 @@ class MessageWidget {
     this.initialize();
     this.injectStyles();
   }
+
   position = "";
   open = false;
-  widgetContainer = null;
+  widgetContent = null;
 
   getPosition(position) {
     const [vertical, horizontal] = position.split("-");
@@ -63,7 +64,7 @@ class MessageWidget {
      * Create a container for the widget and add the following classes:- `widget__hidden`, `widget__container`
      */
     this.widgetContainer = document.createElement("div");
-    this.widgetContainer.classList.add("widget__hidden", "container");
+    this.widgetContainer.classList.add("widget__hidden", "widget__container");
 
     /**
      * Invoke the `createWidget()` method
@@ -79,37 +80,40 @@ class MessageWidget {
 
   createWidgetContent() {
     this.widgetContainer.innerHTML = `
-    <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet"
-  />
-  
- 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
-    rel="stylesheet"
-  />
-
-  <!--Import Font Awesome Icon Font-->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
-    crossorigin="anonymous"
-  />
-
-  <!--Import materialize.css-->
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="static/css/materialize.min.css"
-  />
-
-  <!--Main css-->
-  <link rel="stylesheet" type="text/css" href="static/css/style.css" />
     <div class="container">
-  
+    <!-- Modal for rendering the charts, declare this if you want to render charts, 
+       else you remove the modal -->
+      
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     
+
+   
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Import Font Awesome Icon Font-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+      crossorigin="anonymous"
+    />
+
+    <!--Import materialize.css-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="static/css/materialize.min.css"
+    />
+
+    <!--Main css-->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+     
     <!--chatbot widget -->
     <div class="widget">
       <div class="chat_header">
@@ -149,25 +153,88 @@ class MessageWidget {
     <div class="profile_div" id="profile_div">
       <img class="imgProfile" src="static/img/chat.png" />
     </div>
-
- 
-    <!--JavaScript at end of body for optimized loading-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    
-   
-    <script
-      type="text/javascript"
-      src="static/js/lib/materialize.min.js"
-    ></script>
+  </div>
 
-    
-    <script src="static/js/lib/uuid.min.js"></script>
-    <!--Main Script -->
-    <script type="text/javascript" src="static/js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script
+    type="text/javascript"
+    src="static/js/lib/materialize.min.js"
+  ></script>
+  <script src="static/js/lib/uuid.min.js"></script>
+  <script>
+  
+/* module for importing other js files */
+function include(file) {
+  const script = document.createElement('script');
+  script.src = file;
+  script.type = 'text/javascript';
+  script.defer = true;
 
-    <!--Chart.js Script -->
-    <script type="text/javascript" src="static/js/lib/chart.min.js"></script>
-    <script type="text/javascript" src="static/js/lib/showdown.min.js"></script>  
+  document.getElementsByTagName('head').item(0).appendChild(script);
+}
+
+
+// Bot pop-up intro
+document.addEventListener("DOMContentLoaded", () => {
+  const elemsTap = document.querySelector(".tap-target");
+  // eslint-disable-next-line no-undef
+  const instancesTap = M.TapTarget.init(elemsTap, {});
+  instancesTap.open();
+  setTimeout(() => {
+    instancesTap.close();
+  }, 4000);
+});
+
+/* import components */
+include('./static/js/components/index.js');
+
+window.addEventListener('load', () => {
+  // initialization
+  $(document).ready(() => {
+    // Bot pop-up intro
+    $("div").removeClass("tap-target-origin");
+
+    // drop down menu for close, restart conversation & clear the chats.
+    $(".dropdown-trigger").dropdown();
+
+    // initiate the modal for displaying the charts,
+    // if you dont have charts, then you comment the below line
+    $(".modal").modal();
+
+    // enable this if u have configured the bot to start the conversation.
+    // showBotTyping();
+    // $("#userInput").prop('disabled', true);
+
+    // if you want the bot to start the conversation
+    // customActionTrigger();
+  });
+  // Toggle the chatbot screen
+  $("#profile_div").click(() => {
+    $(".profile_div").toggle();
+    $(".widget").toggle();
+  });
+
+  // clear function to clear the chat contents of the widget.
+  $("#clear").click(() => {
+    $(".chats").fadeOut("normal", () => {
+      $(".chats").html("");
+      $(".chats").fadeIn();
+    });
+  });
+
+  // close function to close the widget.
+  $("#close").click(() => {
+    $(".profile_div").toggle();
+    $(".widget").toggle();
+    scrollToBottomOfResults();
+  });
+});
+  
+  </script>
+  <script type="text/javascript" src="static/js/lib/chart.min.js"></script>
+  <script type="text/javascript" src="static/js/lib/showdown.min.js"></script>
+
     `;
   }
 
