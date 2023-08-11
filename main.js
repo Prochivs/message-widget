@@ -73,6 +73,7 @@ function loadScript(src, callback) {
 function loadCSS(href) {
   const link = document.createElement("link");
   link.rel = "stylesheet";
+  link.type = "text/css";
   link.href = href;
   document.head.appendChild(link);
 }
@@ -86,7 +87,7 @@ loadScript(
 );
 
 // Load external script tags
-loadScript("static/js/lib/materialize.min.js", () => {
+loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/lib/materialize.min.js", () => {
   console.log("External script 1 loaded.");
 });
 
@@ -94,7 +95,7 @@ loadScript("static/js/lib/uuid.min.js", () => {
   console.log("External script 2 loaded.");
 });
 
-loadScript("https://cdn.jsdelivr.net/gh/Prochivs/message-widget@main/static/js/script.js", () => {
+loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/script.js", () => {
   console.log("External script 3 loaded.");
 });
 
@@ -107,11 +108,9 @@ loadScript("static/js/lib/showdown.min.js", () => {
 });
 
 // Load external CSS files
-loadCSS("static/css/materialize.min.css");
+loadCSS("https://raw.githack.com/Prochivs/message-widget/main/static/css/materialize.min.css");
 loadCSS("https://rawcdn.githack.com/Prochivs/message-widget/e4131429f7351c50d6547cc2d14e1a2b2af50558/static/css/style.css");
 loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 );
 loadCSS("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 loadCSS("https://fonts.googleapis.com/icon?family=Material+Icons");
-
-
