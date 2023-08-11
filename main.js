@@ -108,8 +108,7 @@ loadScript("static/js/lib/showdown.min.js", () => {
 // Load external CSS files
 loadCSS("static/css/materialize.min.css");
 loadCSS("static/css/style.css");
-loadCSS(
-  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 );
 loadCSS("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 loadCSS("https://fonts.googleapis.com/icon?family=Material+Icons");
