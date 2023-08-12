@@ -1,8 +1,8 @@
 
 /* module for importing other js files */
-function include(file) {
+function include(src) {
   const script = document.createElement('script');
-  script.src = file;
+  script.src = src;
   script.type = 'text/javascript';
   script.defer = true;
 
