@@ -13,10 +13,6 @@ include('https://raw.githack.com/Prochivs/message-widget/main/static/js/componen
 include('https://raw.githack.com/Prochivs/message-widget/main/static/js/constants.js');
 include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/cardsCarousel.js');
 include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/botTyping.js');
-include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/charts.js');
 include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/collapsible.js');
 include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/dropDown.js');
-include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/location.js');
-include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/pdfAttachment.js');
 include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/quickReplies.js');
-include('https://raw.githack.com/Prochivs/message-widget/main/static/js/components/suggestionButtons.js');
