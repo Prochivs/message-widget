@@ -41,6 +41,10 @@ customHtmlElement.innerHTML = `
       <i class="fa fa-paper-plane" aria-hidden="true"></i>
     </div>
   </div>
+    <div class="chat_footer" style="border-radius: 00px 00px 10px 10px;">
+          <!--Add the name of the bot here -->
+          <span class="chat_footer_title">powered by xavier africa</span>
+        </div>
 </div>
 
 <!--bot profile-->
