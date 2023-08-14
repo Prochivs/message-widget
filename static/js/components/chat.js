@@ -27,7 +27,7 @@ function setUserResponse(message) {
  *
  */
 function getBotResponse(text) {
-  botResponse = `<img class="botAvatar" src="https://raw.githack.com/Prochivs/message-widget/main/static/img/sara_avatar.png"/><span class="botMsg">${text}</span><div class="clearfix"></div>`;
+  botResponse = `<img class="botAvatar" src="https://raw.githack.com/Prochivs/message-widget/main/static/img/e.png"/><span class="botMsg">${text}</span><div class="clearfix"></div>`;
   return botResponse;
 }
 
