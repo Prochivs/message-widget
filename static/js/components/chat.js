@@ -45,7 +45,7 @@ function setBotResponse(response) {
       // if there is no response from Rasa, send  fallback message to the user
       const fallbackMsg = response;
 
-      const BotResponse = `<img class="botAvatar" src="https://raw.githack.com/Prochivs/message-widget/main/static/img/sara_avatar.png"/><p class="botMsg">${fallbackMsg}</p><div class="clearfix"></div>`;
+      const BotResponse = `<img class="botAvatar" src="https://raw.githack.com/Prochivs/message-widget/main/static/img/e.png"/><p class="botMsg">${fallbackMsg}</p><div class="clearfix"></div>`;
 
       $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
       scrollToBottomOfResults();
@@ -53,7 +53,7 @@ function setBotResponse(response) {
       // if there is no response from Rasa, send  fallback message to the user
       const fallbackMsg = "I am facing some issues, please try again later!!!";
 
-      const BotResponse = `<img class="botAvatar" src="https://raw.githack.com/Prochivs/message-widget/main/static/img/sara_avatar.png"/><p class="botMsg">${fallbackMsg}</p><div class="clearfix"></div>`;
+      const BotResponse = `<img class="botAvatar" src="https://raw.githack.com/Prochivs/message-widget/main/static/img/e.png"/><p class="botMsg">${fallbackMsg}</p><div class="clearfix"></div>`;
 
       $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
       scrollToBottomOfResults();
