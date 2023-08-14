@@ -111,7 +111,7 @@ loadScript("https://raw.githack.com/Prochivs/message-widget/main/static/js/lib/s
 
 // Load external CSS files
 loadCSS("https://raw.githack.com/Prochivs/message-widget/main/static/css/materialize.min.css");
-loadCSS("https://rawcdn.githack.com/Prochivs/message-widget/e4131429f7351c50d6547cc2d14e1a2b2af50558/static/css/style.css");
+loadCSS("https://raw.githack.com/Prochivs/message-widget/main/static/css/style.css");
 loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 );
 loadCSS("https://fonts.googleapis.com/css2?family=Lato&display=swap");
