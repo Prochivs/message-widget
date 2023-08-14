@@ -1,9 +1,10 @@
+
 .widget {
-  /* display:none; */
+  display: none;
   width: 350px;
-  right: 5%;
+  right: 15px;
   height: 500px;
-  bottom: 8%;
+  bottom: 5%;
   position: fixed;
   background: #fff;
   border-radius: 10px 10px 10px 10px;
@@ -12,17 +13,33 @@
 
 .chat_header {
   height: 60px;
-  background: #825130;
+  background: #a88c2f;
   border-radius: 10px 10px 0px 0px;
   padding: 5px;
   font-size: 20px;
 }
 
+.chat_footer {
+  border-radius: 10px 10px 0px 0px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.chat_footer_title {
+  color: rgb(224, 224, 224);
+  display:flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:small;
+  justify-content: center;
+  font-style: italic;
+  align-items: center;
+}
+
 .chat_header_title {
-  color: white;
+  color: rgb(240, 235, 235);
   float: left;
   margin-top: 3%;
-  margin-left: 35%;
+  margin-left: 8%;
 }
 
 .chats {
@@ -32,6 +49,7 @@
   border-radius: 1px;
   overflow-y: scroll;
   margin-top: 1px;
+  padding-bottom: 20px;;
   transition: 0.2s;
 }
 
@@ -114,7 +132,7 @@ textarea-webkit-scrollbar {
   padding: 10px;
   float: right;
   margin-right: 0.5em;
-  background: #060dcfc7;
+  background: #a39976;
   color: white;
   margin-bottom: 0.15em;
   font-size: 13px;
@@ -159,11 +177,12 @@ blockquote {
   background: white;
   height: 50px;
   position: absolute;
-  bottom: 0px;
+  bottom: 25px;
   width: 100%;
   padding: 5px;
-  border-radius: 0px 0px 10px 10px;
   border-top: 1px solid #e3e7ee;
+  border-bottom: 1px solid #e3e7ee;
+
 }
 
 #sendButton {
@@ -177,20 +196,22 @@ blockquote {
   padding: 5px;
   font-size: 20px;
   cursor: pointer;
-  color: #060dcfc7;
+  color: #9c8e4dc7;
 }
 
 .imgProfile {
   box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 0px 10px 0 #00000096;
-  border-radius: 50px;
+  border-radius: 10px;
+  padding:5%;
+  background-color: #aeaf75;
   width: 60%;
 }
 
 .profile_div {
-  display: none;
+  /* display: none; */
   position: fixed;
   padding: 15px;
-  width: 7%;
+  width: 10%;
   bottom: 0;
   right: 0;
   cursor: pointer;
@@ -214,7 +235,12 @@ blockquote {
 
 .dropdown-content li > a,
 .dropdown-content li > span {
-  color: #060dcfc7;
+  color: #b89b4bc7;
+}
+
+.dropdown-content {
+  color: #b89b4bc7;
+  border-radius: 4%;
 }
 
 @keyframes animateElement {
@@ -282,9 +308,7 @@ blockquote {
 }
 
 .ratings {
-  margin-top: 5px;
-  background: #9acd32;
-  padding: 5px;
+  margin-top: 5px;  padding: 5px;
   color: white;
   border-radius: 5px;
 }
@@ -333,14 +357,7 @@ blockquote {
   padding: 5px;
 }
 
-.average_cost,
-.timings,
-.location,
-.cuisines {
-  width: 70%;
-  float: right;
-  margin-right: 25%;
-}
+
 
 .fa .fa-user-o {
   font-size: 15px;
@@ -739,10 +756,11 @@ ul.collapsible > li:last-child .collapsible-body {
   float: left;
   margin-top: 5px;
   background: #e3e7ee;
-  color: #000000;
+  color: #535353;
   /* box-shadow: 2px 3px 9px 0px #9a82847a; */
   margin-left: 0.5em;
   padding: 15px;
+  margin-bottom: 20px;
   border-radius: 5px 20px 20px 20px;
   max-width: 60%;
   min-width: 20%;
@@ -753,7 +771,7 @@ ul.collapsible > li:last-child .collapsible-body {
 .botTyping > div {
   width: 10px;
   height: 10px;
-  background-color: #060dcfc7;
+  background-color: #747475c7;
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
