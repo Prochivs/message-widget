@@ -108,8 +108,10 @@
     //////////////////////////////////////////////// get the agent name
     let temp = document.getElementsByName("agentID");
     let agentIndex = temp[0].textContent;
+    
+    // temp[0].textContent;
     let url = "https://pocketbase.xavierafrica.com/api/collections/agents/records/";
-    await fetch(url + `${agentIndex}`)
+    fetch(url + `${agentIndex}`)
       .then(response => {
         // Check if the response status is OK (200)
         if (response.ok) {
@@ -119,11 +121,10 @@
         }
       })
       .then(data => {
-        console.log("Response data:", data);
+        console.log("Response data :", data);
         document.getElementById("demo").innerHTML = data.name;
       })
     ////////////////////////////////////////////////////////////////////////
-
 
     /**
      * Set user response on the chat screen
