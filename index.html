@@ -68,7 +68,8 @@
       <div class="widget">
         <div class="chat_header">
           <!--Add the name of the bot here -->
-          <span class="chat_header_title" id="content" >{{id}}</span>
+           <div id="content">{{id}}</div>
+          <span class="chat_header_title"  >{{id}}</span>
           <span class="dropdown-trigger" href="#" data-target="dropdown1">
             <i class="material-icons"> more_vert </i>
           </span>
@@ -121,14 +122,21 @@
     <script type="text/javascript" src="https://raw.githack.com/Prochivs/message-widget/main/static/js/lib/showdown.min.js"></script>
 
       <script>
-      // Get the element with the 'content' id
+   // Get the element with the 'content' id
 const contentElement = document.getElementById('content');
 
 // Assuming you have an 'id' variable with a value
-const iss = {id};
+const id = 123;
 
-// Set the content of the element using the 'id' value
-contentElement.innerHTML = "The ID is: " + iss;
+// Replace the '{{id}}' placeholder in the content
+const modifiedContent = contentElement.innerHTML.replace("{{id}}", id);
+
+// Update the content of the element
+contentElement.innerHTML = modifiedContent;
+
+// Now you can also use the 'id' variable in the script
+console.log("The value of 'id' is:", id);
+
     </script>
   </body>
 </html>
