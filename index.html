@@ -107,7 +107,11 @@
 
     //////////////////////////////////////////////// get the agent name
     let temp = document.getElementsByName("agentID");
-    let agentIndex = temp[0].textContent;
+
+        let agent = temp[0].textContent;
+        let agentIndex = agent.slice(0, -7);
+        let last7Characters = agentIndex.slice(-7);
+        let session = last7Characters;
     
     // temp[0].textContent;
     let url = "https://pocketbase.xavierafrica.com/api/collections/agents/records/";
